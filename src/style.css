@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.app-container {
+  width:80%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(143, 91, 156, 0.87);
+}
+
+.heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 1rem;
+  background-color: rgba(238, 106, 11, 0.651);
+}
+
+.heading .web-title {
+  font-size: 2rem;
+  padding: 0.5rem;
+  font-weight: 900;
+  font-family: 'Monoton', cursive;
+}
+
+a {
+  text-decoration: none;
+}
+
+.heading .navbar ul {
+  display: flex;
+  flex-direction: row;
+  margin-right: 1rem;
+}
+.navbar ul li {
+  list-style: none;
+  margin-right: 1.5rem;
+}
