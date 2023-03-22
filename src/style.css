@@ -90,7 +90,7 @@ a {
   display: flex;
   flex-direction: column;
   width: 23rem;
-  height: 26rem;
+  height: 27rem;
   background-color: #8a929c;
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -149,6 +149,19 @@ form {
 form button {
   width: 10rem;
   height: 3rem;
+}
+
+.comment-btn {
+  cursor: pointer;
+  font-weight: 600;
+  width: 7rem;
+  height: 2rem;
+}
+
+.fa-heart:hover {
+  color: red;
+  transition: 0.5s;
+  transform: scaleX(1.2);
 }
 
 footer {
