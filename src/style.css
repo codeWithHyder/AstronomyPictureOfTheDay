@@ -98,8 +98,6 @@ a {
   padding: 0.4rem;
   border-radius: 0.5rem;
   transition: ease-in-out 0.5s;
-
-  /* backdrop-filter: blur(10px); */
 }
 
 .card:hover {
@@ -114,27 +112,34 @@ a {
 }
 
 .comment-model {
-  /* display: flex; */
   flex-direction: column;
   width: 90vw;
-  height: 80rem;
-  margin-left: 4rem;
+  height: 70rem;
+  margin-left: auto;
+  margin-right: auto;
   position: absolute;
   z-index: 20;
-  top: 25%;
+  top: 20%;
+  left: 4%;
   bottom: 20%;
-  display: none;
+  background-color: transparent;
+  /* display: none; */
 }
 
 .comment-card {
   display: flex;
   flex-direction: column;
-  padding: 2rem 6rem;
-  width: 100%;
+  padding: 1rem 2rem;
+  width: 95%;
   background-color: rgb(226, 236, 233);
   margin-left: 2rem;
   border-radius: 0.4rem;
 }
+
+.cross {
+  font-size: 2rem;
+  cursor: pointer;
+} 
 
 form {
   display: flex;
