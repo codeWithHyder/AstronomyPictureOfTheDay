@@ -111,19 +111,25 @@ a {
   margin-right: 2rem;
 }
 
+.mediaImage {
+  width: 69rem;
+  height: 45rem;
+}
+
 .comment-model {
   flex-direction: column;
   width: 90vw;
-  height: 70rem;
+  height: 90vh;
   margin-left: auto;
   margin-right: auto;
-  position: absolute;
+  position: fixed;
   z-index: 20;
-  top: 20%;
+  top: 2%;
   left: 4%;
-  bottom: 20%;
-  background-color: transparent;
-  /* display: none; */
+  overflow-y: auto;
+  bottom: 2%; 
+  background-color: #8a929c;
+  display: none; 
 }
 
 .comment-card {
@@ -131,6 +137,7 @@ a {
   flex-direction: column;
   padding: 1rem 2rem;
   width: 95%;
+  height: 49rem;
   background-color: rgb(226, 236, 233);
   margin-left: 2rem;
   border-radius: 0.4rem;
@@ -144,6 +151,7 @@ a {
 form {
   display: flex;
   flex-direction: column;
+  margin-bottom: 2rem;
 }
 
 .input {
