@@ -11,4 +11,4 @@ const getPictures = async () => {
 
 };
 
-export default getPictures;
+export { getPictures as default };

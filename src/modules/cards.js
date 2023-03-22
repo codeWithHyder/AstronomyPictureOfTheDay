@@ -1,6 +1,6 @@
 import getPictures from './GetRequest';
-import {postLike, getLikes} from './involvementApp';
-import showCommentCard from './showCommentsCard'; 
+import { postLike, getLikes } from './involvementApp';
+import showCommentCard from './showCommentsCard'; // eslint-disable-line import/no-cycle
 import countCards from './counts';
 
 const itemGrid = document.querySelector('.item-grid');
@@ -83,7 +83,7 @@ const createCards = async () => {
       // modal.innerHTML = '';
       // modal.style.display= 'block';
        modal.style.display = 'block';
-        console.log(item.title);
+        // console.log(item.title);
       await showCommentCard(item.title);
       //const appblur = document.querySelector('.app-container');
       // appblur.style.position = 'absolute';
@@ -109,4 +109,4 @@ const createCards = async () => {
   // console.log(counter)
 };
 
-export default createCards ;
+export { createCards as default };

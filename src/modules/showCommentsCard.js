@@ -1,6 +1,6 @@
 import getPictures from './GetRequest';
 import displayComments from './comments';
-import  addComments  from './APIcomments';
+import { addComments } from './APIcomments';
 import countComments from './countComments';
 
 const showCommentCard = async (title) => {
@@ -79,7 +79,7 @@ const showCommentCard = async (title) => {
       form.innerHTML = `
           <input type="text" placeholder="Your name" class="name-input input" required autocomplete="off" />
           <textarea name="comment-input" class="comment-input input" placeholder="Your insights..." required></textarea>
-          <button type="submit">Comment</button>
+          <button type="submit">Submit Comment</button>
           `;
 
       mainDescription.append(h1, explanation, extraExplanation, h2, commentContainer, commentTitle, form); // eslint-disable-line max-len
@@ -114,4 +114,4 @@ const showCommentCard = async (title) => {
  
 };
 
-export default showCommentCard ;
+export { showCommentCard as default };
