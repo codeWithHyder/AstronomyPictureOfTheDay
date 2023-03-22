@@ -1,7 +1,7 @@
-import getPictures from './GetRequest';
-//import {postLike, getLikes} from './involvementApp';
-//import showCommentCard from './showCommentsCard'; 
-//import countCards from './counts';
+import getPictures from './GetRequest.js';
+import { postLike, getLikes } from './involvementApp.js';
+import showCommentCard from './showCommentsCard.js'; // eslint-disable-line import/no-cycle
+import countCards from './counts.js';
 
 const itemGrid = document.querySelector('.item-grid');
 
@@ -21,9 +21,8 @@ const createCards = async () => {
         await showCommentCard(item.title);
         const modal = document.querySelector('.comment-model');
         modal.classList.add('active');
-        
       });
-      } else {
+    } else {
       const media = document.createElement('iframe');
       media.classList.add('video');
       media.src = item.url;
@@ -77,9 +76,23 @@ const createCards = async () => {
     comment.innerText = 'Comments';
 
     comment.addEventListener('click', async () => {
-      await showCommentCard(item.title);
       const modal = document.querySelector('.comment-model');
+
+      modal.innerHTML = '';
+      //  fetch.innerText = 'please wait it is fetching data...';
+      modal.style.display = 'block';
+
       modal.classList.add('active');
+      // modal.innerHTML = '';
+      // modal.style.display= 'block';
+
+      // console.log(item.title);
+      await showCommentCard(item.title);
+
+      const cardblur = document.querySelector('.item-grid');
+      // appblur.style.position = 'absolute';
+      cardblur.style.backdropFilter = 'blur(10px)';
+      cardblur.style.zIndex = 3;
     });
 
     titleContainer.appendChild(cardTitle);
@@ -97,7 +110,7 @@ const createCards = async () => {
   } else {
     counter.textContent = countCards();
   }
-  console.log(counter)
+  // console.log(counter)
 };
 
-export default createCards ;
+export { createCards as default };

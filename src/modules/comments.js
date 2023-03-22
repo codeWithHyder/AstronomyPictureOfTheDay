@@ -1,4 +1,4 @@
-import getComments  from './APIcomments';
+import { getComments } from './APIcomments.js';
 
 const displayComments = async (userID) => {
   const comments = await getComments(userID);
@@ -30,4 +30,4 @@ const displayComments = async (userID) => {
   }
 };
 
-export default displayComments;
+export { displayComments as default };

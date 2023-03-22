@@ -8,7 +8,6 @@ const getPictures = async () => {
   const response = await fetch(url);
   const answer = await response.json();
   return answer;
-
 };
 
-export default getPictures;
+export { getPictures as default };

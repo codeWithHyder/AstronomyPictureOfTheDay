@@ -1,7 +1,7 @@
-import getPictures from './GetRequest';
-import displayComments from './comments';
-import  addComments  from './APIcomments';
-import countComments from './countComments';
+import getPictures from './GetRequest.js';
+import displayComments from './comments.js';
+import { addComments } from './APIcomments.js';
+import countComments from './countComments.js';
 
 const showCommentCard = async (title) => {
   const myPicturesJson = await getPictures();
@@ -18,11 +18,13 @@ const showCommentCard = async (title) => {
       const closeIcon = document.createElement('div');
       closeIcon.classList.add('close-icon');
       const icon = document.createElement('i');
-      icon.classList.add('fas', 'fa-times');
+      icon.classList.add('fas', 'fa-times', 'cross');
       closeIcon.appendChild(icon);
 
       const closeClick = () => {
         commentModel.classList.remove('active');
+        // commentModel.innerHTML = '';
+        commentModel.style.display = 'none';
         commentModel.innerHTML = '';
       };
 
@@ -75,15 +77,15 @@ const showCommentCard = async (title) => {
 
       const form = document.createElement('form');
       form.innerHTML = `
-          <input type="text" placeholder="Your name" class="name-input" required autocomplete="off" />
-          <textarea name="comment-input" class="comment-input" placeholder="Your insights..." required></textarea>
-          <button type="submit">Comment</button>
+          <input type="text" placeholder="Your name" class="name-input input" required autocomplete="off" />
+          <textarea name="comment-input" class="comment-input input" placeholder="Your insights..." required></textarea>
+          <button type="submit">Submit Comment</button>
           `;
 
       mainDescription.append(h1, explanation, extraExplanation, h2, commentContainer, commentTitle, form); // eslint-disable-line max-len
       commentCard.append(closeIcon, mainDescription);
       commentModel.appendChild(commentCard);
-
+      //    commentModel.style.display = 'block';
       form.addEventListener('submit', async (event) => {
         event.preventDefault();
         commentContainer.innerHTML = '';
@@ -111,4 +113,4 @@ const showCommentCard = async (title) => {
   commentCounter.innerText = `(${countComments()})`;
 };
 
-export default showCommentCard ;
+export { showCommentCard as default };
