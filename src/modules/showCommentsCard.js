@@ -1,7 +1,7 @@
-import getPictures from './GetRequest';
-import displayComments from './comments';
-import { addComments } from './APIcomments';
-import countComments from './countComments';
+import getPictures from './GetRequest.js';
+import displayComments from './comments.js';
+import { addComments } from './APIcomments.js';
+import countComments from './countComments.js';
 
 const showCommentCard = async (title) => {
   const myPicturesJson = await getPictures();
@@ -85,7 +85,7 @@ const showCommentCard = async (title) => {
       mainDescription.append(h1, explanation, extraExplanation, h2, commentContainer, commentTitle, form); // eslint-disable-line max-len
       commentCard.append(closeIcon, mainDescription);
       commentModel.appendChild(commentCard);
-    //    commentModel.style.display = 'block';
+      //    commentModel.style.display = 'block';
       form.addEventListener('submit', async (event) => {
         event.preventDefault();
         commentContainer.innerHTML = '';
@@ -111,7 +111,6 @@ const showCommentCard = async (title) => {
 
   const commentCounter = document.querySelector('.comment-counter');
   commentCounter.innerText = `(${countComments()})`;
- 
 };
 
 export { showCommentCard as default };

@@ -1,7 +1,7 @@
-import getPictures from './GetRequest';
-import { postLike, getLikes } from './involvementApp';
-import showCommentCard from './showCommentsCard'; // eslint-disable-line import/no-cycle
-import countCards from './counts';
+import getPictures from './GetRequest.js';
+import { postLike, getLikes } from './involvementApp.js';
+import showCommentCard from './showCommentsCard.js'; // eslint-disable-line import/no-cycle
+import countCards from './counts.js';
 
 const itemGrid = document.querySelector('.item-grid');
 
@@ -21,9 +21,8 @@ const createCards = async () => {
         await showCommentCard(item.title);
         const modal = document.querySelector('.comment-model');
         modal.classList.add('active');
-        
       });
-      } else {
+    } else {
       const media = document.createElement('iframe');
       media.classList.add('video');
       media.src = item.url;
@@ -77,18 +76,16 @@ const createCards = async () => {
     comment.innerText = 'Comments';
 
     comment.addEventListener('click', async () => {
-     
       const modal = document.querySelector('.comment-model');
       modal.classList.add('active');
       // modal.innerHTML = '';
       // modal.style.display= 'block';
-       modal.style.display = 'block';
-        // console.log(item.title);
+      modal.style.display = 'block';
+      // console.log(item.title);
       await showCommentCard(item.title);
-      //const appblur = document.querySelector('.app-container');
+      // const appblur = document.querySelector('.app-container');
       // appblur.style.position = 'absolute';
-       //appblur.style.backdropFilter = 'blur(15px)';
-      
+      // appblur.style.backdropFilter = 'blur(15px)';
     });
 
     titleContainer.appendChild(cardTitle);
