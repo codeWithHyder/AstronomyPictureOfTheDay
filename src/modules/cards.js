@@ -77,23 +77,22 @@ const createCards = async () => {
 
     comment.addEventListener('click', async () => {
       const modal = document.querySelector('.comment-model');
-       
-       modal.innerHTML = '';
+
+      modal.innerHTML = '';
       //  fetch.innerText = 'please wait it is fetching data...';
       modal.style.display = 'block';
-      
+
       modal.classList.add('active');
       // modal.innerHTML = '';
       // modal.style.display= 'block';
-    
+
       // console.log(item.title);
       await showCommentCard(item.title);
-    
-       const cardblur = document.querySelector('.item-grid');
+
+      const cardblur = document.querySelector('.item-grid');
       // appblur.style.position = 'absolute';
-       cardblur.style.backdropFilter = 'blur(10px)';
-       cardblur.style.zIndex = 3;
-       
+      cardblur.style.backdropFilter = 'blur(10px)';
+      cardblur.style.zIndex = 3;
     });
 
     titleContainer.appendChild(cardTitle);

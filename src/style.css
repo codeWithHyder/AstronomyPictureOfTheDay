@@ -127,9 +127,9 @@ a {
   top: 2%;
   left: 4%;
   overflow-y: auto;
-  bottom: 2%; 
+  bottom: 2%;
   background-color: #8a929c;
-  display: none; 
+  display: none;
 }
 
 .comment-card {
@@ -146,7 +146,7 @@ a {
 .cross {
   font-size: 2rem;
   cursor: pointer;
-} 
+}
 
 form {
   display: flex;

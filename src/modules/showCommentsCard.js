@@ -18,7 +18,7 @@ const showCommentCard = async (title) => {
       const closeIcon = document.createElement('div');
       closeIcon.classList.add('close-icon');
       const icon = document.createElement('i');
-      icon.classList.add('fas', 'fa-times','cross');
+      icon.classList.add('fas', 'fa-times', 'cross');
       closeIcon.appendChild(icon);
 
       const closeClick = () => {
