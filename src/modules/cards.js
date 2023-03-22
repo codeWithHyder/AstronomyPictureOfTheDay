@@ -1,7 +1,7 @@
 import getPictures from './GetRequest';
-//import {postLike, getLikes} from './involvementApp';
-//import showCommentCard from './showCommentsCard'; 
-//import countCards from './counts';
+import {postLike, getLikes} from './involvementApp';
+import showCommentCard from './showCommentsCard'; 
+import countCards from './counts';
 
 const itemGrid = document.querySelector('.item-grid');
 
@@ -77,9 +77,18 @@ const createCards = async () => {
     comment.innerText = 'Comments';
 
     comment.addEventListener('click', async () => {
-      await showCommentCard(item.title);
+     
       const modal = document.querySelector('.comment-model');
       modal.classList.add('active');
+      // modal.innerHTML = '';
+      // modal.style.display= 'block';
+       modal.style.display = 'block';
+        console.log(item.title);
+      await showCommentCard(item.title);
+      //const appblur = document.querySelector('.app-container');
+      // appblur.style.position = 'absolute';
+       //appblur.style.backdropFilter = 'blur(15px)';
+      
     });
 
     titleContainer.appendChild(cardTitle);
@@ -97,7 +106,7 @@ const createCards = async () => {
   } else {
     counter.textContent = countCards();
   }
-  console.log(counter)
+  // console.log(counter)
 };
 
 export default createCards ;

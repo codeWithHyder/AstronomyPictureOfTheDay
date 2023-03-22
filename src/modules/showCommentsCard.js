@@ -23,6 +23,8 @@ const showCommentCard = async (title) => {
 
       const closeClick = () => {
         commentModel.classList.remove('active');
+        // commentModel.innerHTML = '';
+        commentModel.style.display = 'none';
         commentModel.innerHTML = '';
       };
 
@@ -75,15 +77,15 @@ const showCommentCard = async (title) => {
 
       const form = document.createElement('form');
       form.innerHTML = `
-          <input type="text" placeholder="Your name" class="name-input" required autocomplete="off" />
-          <textarea name="comment-input" class="comment-input" placeholder="Your insights..." required></textarea>
+          <input type="text" placeholder="Your name" class="name-input input" required autocomplete="off" />
+          <textarea name="comment-input" class="comment-input input" placeholder="Your insights..." required></textarea>
           <button type="submit">Comment</button>
           `;
 
       mainDescription.append(h1, explanation, extraExplanation, h2, commentContainer, commentTitle, form); // eslint-disable-line max-len
       commentCard.append(closeIcon, mainDescription);
       commentModel.appendChild(commentCard);
-
+    //    commentModel.style.display = 'block';
       form.addEventListener('submit', async (event) => {
         event.preventDefault();
         commentContainer.innerHTML = '';
@@ -109,6 +111,7 @@ const showCommentCard = async (title) => {
 
   const commentCounter = document.querySelector('.comment-counter');
   commentCounter.innerText = `(${countComments()})`;
+ 
 };
 
 export default showCommentCard ;
