@@ -1,10 +1,10 @@
-# Leaderboard
+# Capston-javascript
 
 <a name="readme-top"></a>
 
 <div align="center">
- <h3><b>Leaderboard is a web site for learning APIs, ES6 modules and webpack
- and it is a simple website that displays a list of name and scres by diffrent people</b></h3>
+ <h3><b>Astronomy picture of the day is a web site for learning APIs, ES6 modules and webpack
+ and it is a simple website that displays a list of cards of planets</b></h3>
 
 </div>
 
@@ -37,9 +37,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [leaderboard] <a name="about-project"></a>
+# 📖 [Astronomy picture of the day] <a name="about-project"></a>
 
-**[Leaderboard]** is a web app. for learning APIs, ES6 modules and webpack,
+**[Astronomy picture of the day]** is a web app. for learning APIs, ES6 modules and webpack,
 and it is a simple website that displays list of name score of different people.
 
 ## 🛠 Built With <a name="built-with"></a>
@@ -73,7 +73,7 @@ and it is a simple website that displays list of name score of different people.
 
 ## 🚀 Live Demo<a name="live-demo"></a>
 
-- [Live Demo Link](https://codewithhyder.github.io/leaderboardsetup/)
+- [Live Demo Link](https://codewithhyder.github.io/AstronomyPictureOfTheDay/dist/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -135,7 +135,7 @@ You can deploy this project using:
 
 - GitHub: [@codeWithHyder](https://github.com/codeWithHyder)
 - Twitter: [@Hyder](https://twitter.com/@hyder3512)
-- LinkedIn: [Hyder](https://linkedin.com/in/https://www.linkedin.com/in/ghulam-hyder-dar)
+- LinkedIn: [Hyder](https://www.linkedin.com/in/ghulam-hyder-dar/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
